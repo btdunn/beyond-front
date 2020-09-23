@@ -12,50 +12,63 @@
           <h1 class='depart'>Departures</h1>
         </div>
       </header>
-        <div class='side-image'>
-
+        <div class="departures">
+          <DeparturesForm />
         </div>
     </body>
   </div>
 </template>
 
 <script>
+import DeparturesForm from '@/components/DeparturesForm'
+
 export default {
-  
+  components: {
+    DeparturesForm
+  }
 }
 </script>
 
 <style scoped>
-  body{
-    background-image: url(https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/weather/cloud/stratocumulus-from-above-1.jpg);
-    min-width: 100%;
-    min-height: 100%;
-  } 
 
-  h1{
-    font-family: 'Righteous', cursive;
-  }
+h1{
+  font-family: 'Righteous', cursive;
+  color: antiquewhite;
+}
 
-  .depart-container{
-    position: absolute;
-    display: flex;
-    height: 60vh;
-    z-index: 2;	
-    margin-left: 100px;
-    margin-top: 100px;
-  }
+body{
+  margin:0;
+  z-index: -1;
+  background-image: url(https://www.imgbase.info/images/safe-wallpapers/photography/airplanes/49764_airplanes_airplane_wing_over_the_clouds.jpg);
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-  header{
-    display: flex;
-    /* width: 100%; */
-    flex: 1;
-    justify-content: flex-end;
-    height: 100vh;
-  }
+.depart-container{
+  position: absolute;
+  display: flex;
+  z-index: 2;	
+  margin-left: 100px;
+}
 
-  .side-image{
-    background-color: purple;
-    height: 100vh;
-    width: 60vh;
-  }
+.depart{
+  display: flex;
+  height: 20%;
+  opacity: 100%;
+}
+
+.departures{
+  display: flex;
+  justify-content: center;
+  background-color: skyblue;
+  width: 80%;
+  height: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
 </style>

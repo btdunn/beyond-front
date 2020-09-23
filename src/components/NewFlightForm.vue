@@ -5,11 +5,11 @@
       <label class='input-label' for='from'>Departing From...</label>
       <input type='text' name='from' alt='Departing From...'>
       <label class='input-label' for='fromDate'>Departure Date</label>
-      <input type='text' name='fromDate' alt='Departure Date'>
+      <input type='date' name='fromDate' alt='Departure Date'>
       <label class='input-label' for='to'>Arriving In...</label>
       <input type='text' name='to' alt='Arriving In...'>
       <label class='input-label' for='toDate'>Arrival Date</label>
-      <input type='text' name='toDate' alt='Arrival Date'>
+      <input type='date' name='toDate' alt='Arrival Date'>
       <label class='radio-label' for='one-way'>One Way</label>
       <input type='radio' class='radio' name='one-way' alt='one-way'>
       <label class='radio-label' for='round-trip'>Round Trip</label>
@@ -21,8 +21,9 @@
 </template>
 
 <script>
+
 export default {
-  
+
 }
 </script>
 

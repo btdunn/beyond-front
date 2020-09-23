@@ -91,25 +91,25 @@ body{
 }
 
 .background{
-z-index: -1;
-position: absolute;
-min-width: 100%;
-min-height: 100%;
+	z-index: -1;
+	position: absolute;
+	min-width: 100%;
+	min-height: 100%;
 }
 
 .title-container{
-position: absolute;
-display: flex;
-height: 60vh;
-z-index: 2;	
-margin-left: 100px;
-margin-top: 100px;
+	position: absolute;
+	display: flex;
+	height: 60vh;
+	z-index: 2;	
+	margin-left: 100px;
+	margin-top: 100px;
 }
 
 .logo{
-display: flex;
-height: 30%;
-opacity: 100%;
+	display: flex;
+	height: 30%;
+	opacity: 100%;
 }
 
 </style>
