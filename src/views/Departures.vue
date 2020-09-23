@@ -39,7 +39,7 @@ h1{
 body{
   margin:0;
   z-index: -1;
-  background-image: url(https://www.imgbase.info/images/safe-wallpapers/photography/airplanes/49764_airplanes_airplane_wing_over_the_clouds.jpg);
+  background-image: url(https://i.imgur.com/1cmLASQ.jpg);
   position: absolute;
   min-width: 100%;
   min-height: 100%;

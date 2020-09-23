@@ -30,6 +30,7 @@ export default {
 	methods: {
 		seeOptions(selections){
 			console.log(selections)
+			this.$router.push({name: 'Departures'})
 		}
 	}
 }
