@@ -1,19 +1,22 @@
 <template>
   <div>
     <nav>
-    <form>
+    <form @submit.prevent="submitForm">
       <label class='input-label' for='from'>Departing From...</label>
-      <input type='text' name='from' alt='Departing From...'>
+      <input v-model="departure" type='text' name='from' alt='Departing From...'>
       <label class='input-label' for='fromDate'>Departure Date</label>
-      <input type='date' name='fromDate' alt='Departure Date'>
+      <input v-model="ddate" type='date' name='fromDate' alt='Departure Date'>
+      
       <label class='input-label' for='to'>Arriving In...</label>
-      <input type='text' name='to' alt='Arriving In...'>
+      <input v-model="arrival" type='text' name='to' alt='Arriving In...'>
       <label class='input-label' for='toDate'>Arrival Date</label>
-      <input type='date' name='toDate' alt='Arrival Date'>
+      <input v-model="adate" type='date' name='toDate' alt='Arrival Date'>
+
       <label class='radio-label' for='one-way'>One Way</label>
-      <input type='radio' class='radio' name='one-way' alt='one-way'>
+      <input v-model="direction" value='one-way' type='radio' class='radio' name='direction' alt='one-way'>
       <label class='radio-label' for='round-trip'>Round Trip</label>
-      <input type='radio' class='radio' name='round-trip' alt='round-trip'>
+      <input v-model="direction" value='round-trip' type='radio' class='radio' name='direction' alt='round-trip'>
+      
       <input class='submit-button' type='submit' value='Fly'>
     </form>
     </nav>
@@ -23,7 +26,26 @@
 <script>
 
 export default {
-
+  data(){
+    return {
+        departure: "",
+        ddate: "",
+        arrival: "",
+        adate: "",
+        direction: "",
+    }
+  },
+  methods: {
+    submitForm(){
+      this.$emit("submit", {
+        departure: this.departure,
+        ddate: this.ddate,
+        arrival: this.arrival,
+        adate: this.adate,
+        direction: this.direction,
+      })
+    }
+  }
 }
 </script>
 
@@ -59,6 +81,7 @@ form{
 input{
 	border: 2px solid hsla(19, 80%, 36%, 1);
 	padding: 10px;
+  margin-bottom: 16px;
 }
 
 .radio{

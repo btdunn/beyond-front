@@ -14,7 +14,7 @@
       <img class='background' src='https://i.imgur.com/SSdyCwK.jpg'/>
     </header>
 		<div class="menu">
-			<NewFlightForm />
+			<NewFlightForm @submit="seeOptions" />
 		</div>
   </body>
 </div>
@@ -26,6 +26,11 @@ import NewFlightForm from "@/components/NewFlightForm"
 export default {
   components: {
 		NewFlightForm,
+	},
+	methods: {
+		seeOptions(selections){
+			console.log(selections)
+		}
 	}
 }
 </script>
