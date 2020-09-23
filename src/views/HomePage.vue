@@ -3,39 +3,30 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='index.css'>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <title>Beyond Air Travel</title>
   </head>
   <body>
     <header>
       <div class='title-container'>
-        <img class='logo' src='https://i.imgur.com/wLERsIg.png'/>
+        <img class='logo' src='https://i.imgur.com/3y0HFCx.png'/>
       </div>
       <img class='background' src='https://i.imgur.com/SSdyCwK.jpg'/>
     </header>
-    <div class='menu'>
-      <nav>
-        <form>
-          <label class='input-label' for='from'>Departing From...</label>
-          <input type='text' name='from' alt='Departing From...'>
-          <label class='input-label' for='to'>Arriving In...</label>
-          <input type='text' name='to' alt='Arriving In...'>
-          <label class='radio-label' for='one-way'>One Way</label>
-          <input type='radio' class='radio' name='one-way' alt='one-way'>
-          <label class='radio-label' for='round-trip'>Round Trip</label>
-          <input type='radio' class='radio' name='round-trip' alt='round-trip'>
-          <input class='submit-button' type='submit' value='Fly'>
-        </form>
-      </nav>
-    </div>
+		<div class="menu">
+			<NewFlightForm />
+		</div>
   </body>
 </div>
 </template>
 
 <script>
+import NewFlightForm from "@/components/NewFlightForm"
+
 export default {
-  
+  components: {
+		NewFlightForm,
+	}
 }
 </script>
 
@@ -86,87 +77,39 @@ table {
 
 /* end meyers */
 
-/* .title-container{
-  /* background-image: url(https://i.imgur.com/SSdyCwK.jpg) no-repeat center center fixed; */
-	/* position: absolute; */
-	/* width: 100%;
-	min-width: 100%;
-	min-height: 100%;
-	z-index: -1;
-} */
 
-.background{
-	z-index: -1;
-	position: absolute;
-	min-width: 100%;
-	min-height: 100%;
-}
-
-
-nav{
-	/* position: absolute; */
-	background-image: url(https://secure.img1-fg.wfcdn.com/im/39064809/resize-h800%5Ecompr-r85/9862/98628906/Trippy+33%2527+x+20.5%2522+Geometric+Wallpaper.jpg) ;
-	height: 100vh;
-	width: 60vh;
-}
-
-.title-container{
-	position: absolute;
-	display: flex;
-	height: 60vh;
-	z-index: 2;	
-	margin-left: 100px;
-	margin-top: 100px;
+body{
+  margin:0;
 }
 
 .menu{
 	display: flex;
-	width: 100%;
+	width: 70%;
 	flex: 1;
 	justify-content: flex-end;
 	height: 100vh;
 }
 
+.background{
+z-index: -1;
+position: absolute;
+min-width: 100%;
+min-height: 100%;
+}
+
+.title-container{
+position: absolute;
+display: flex;
+height: 60vh;
+z-index: 2;	
+margin-left: 100px;
+margin-top: 100px;
+}
+
 .logo{
-	display: flex;
-	height: 30%;
-	opacity: 80%;
+display: flex;
+height: 30%;
+opacity: 100%;
 }
 
-.input-label{
-	color: whitesmoke;
-	font-family: 'Righteous', cursive;
-	font-size: 20pt;
-	-webkit-text-stroke: 1px grey;
-}
-
-.radio-label{
-	color: whitesmoke;
-	font-family: 'Righteous', cursive;
-	font-size: 15pt;
-	-webkit-text-stroke: 1px grey;
-}
-
-form{
-	display: flex;
-	margin-top: 100px;
-	flex-direction: column;
-	padding: 5em;
-}
-
-input{
-	border: 2px solid hsla(19, 80%, 36%, 1);
-}
-
-.radio{
-	flex-direction: column;
-	margin-left: 115px;
-	margin-right: auto;
-}
-
-.submit-button{
-	background: hsla(19, 66%, 47%, 1);
-	opacity: 90%;
-	font-family: 'Righteous', cursive;
-}
 </style>
