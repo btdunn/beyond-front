@@ -12,6 +12,9 @@ import FlightOption from "@/components/FlightOption"
 export default {
   components: {
     FlightOption
+  },
+  mounted: function() {
+    this.$store.dispatch('fetchFlights')
   }
 }
 </script>
