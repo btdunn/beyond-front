@@ -2,7 +2,7 @@
   <div>
     <li>
       <p class="d-time">  
-        ss
+        a
       </p>
       <p class="a-time">
         ss

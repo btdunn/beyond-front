@@ -25,8 +25,9 @@ import DeparturesForm from '@/components/DeparturesForm'
 export default {
   components: {
     DeparturesForm
-  }
+  },
 }
+
 </script>
 
 <style scoped>
