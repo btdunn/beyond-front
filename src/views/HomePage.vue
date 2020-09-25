@@ -31,6 +31,7 @@ export default {
 		seeOptions(selections){
 			this.$router.push({name: 'Departures'})
 			this.$store.dispatch('getFlightSearch', selections)
+			this.$store.dispatch('showFlights')
 		}
 	}
 }

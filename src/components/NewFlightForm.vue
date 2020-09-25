@@ -6,16 +6,12 @@
       <input v-model="departure" type='text' name='from' alt='Departing From...'>
       <label class='input-label' for='fromDate'>Departure Date</label>
       <input v-model="ddate" type='date' name='fromDate' alt='Departure Date'>
-      
       <label class='input-label' for='to'>Arriving In...</label>
       <input v-model="arrival" type='text' name='to' alt='Arriving In...'>
-      <label class='input-label' for='toDate'>Arrival Date</label>
-      <input v-model="adate" type='date' name='toDate' alt='Arrival Date'>
-
-      <label class='radio-label' for='one-way'>One Way</label>
+      <!-- <label class='radio-label' for='one-way'>One Way</label>
       <input v-model="direction" value='one-way' type='radio' class='radio' name='direction' alt='one-way'>
       <label class='radio-label' for='round-trip'>Round Trip</label>
-      <input v-model="direction" value='round-trip' type='radio' class='radio' name='direction' alt='round-trip'>
+      <input v-model="direction" value='round-trip' type='radio' class='radio' name='direction' alt='round-trip'> -->
       
       <input class='submit-button' type='submit' value='Fly'>
     </form>
@@ -31,8 +27,7 @@ export default {
         departure: "",
         ddate: "",
         arrival: "",
-        adate: "",
-        direction: "",
+        // direction: "",
     }
   },
   methods: {
@@ -41,8 +36,7 @@ export default {
         departure: this.departure,
         ddate: this.ddate,
         arrival: this.arrival,
-        adate: this.adate,
-        direction: this.direction,
+        // direction: this.direction,
       })
     }
   }

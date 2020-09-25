@@ -2,10 +2,10 @@
   <div>
     <li>
       <p class="d-time">  
-        a
+        
       </p>
       <p class="a-time">
-        ss
+        
       </p>
       <p class="duration">
         ok
