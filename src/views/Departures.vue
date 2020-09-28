@@ -64,7 +64,6 @@ body{
 .departures{
   display: flex;
   justify-content: center;
-  /* background-color: rgb(235, 159, 74); */
   opacity: 90%;
   width: 80%;
   height: 80vh;
