@@ -36,7 +36,6 @@ export default {
         departure: this.departure,
         ddate: this.ddate,
         arrival: this.arrival,
-        // direction: this.direction,
       })
     }
   }
