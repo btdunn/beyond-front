@@ -4,7 +4,7 @@
       <header>
         <div class="review-container">
           <div class="review">
-
+            <ReviewFlight />
           </div>
         </div>
         <div class="banner">
@@ -19,8 +19,12 @@
 </template>
 
 <script>
+import ReviewFlight from '@/components/ReviewFlight'
+
 export default {
-  
+  components: {
+    ReviewFlight,
+  }
 }
 </script>
 
@@ -45,7 +49,7 @@ header{
 .banner{
   width: 50%;
   height: 70vh;
-  background-image: url(https://i.imgur.com/AIhhkT6.jpg);
+  background-image: url(https://i.imgur.com/gLWk0Ig.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }

@@ -45,24 +45,24 @@ export default {
 <style scoped>
 nav{
   position: absolute;
-	background-image: url(https://secure.img1-fg.wfcdn.com/im/39064809/resize-h800%5Ecompr-r85/9862/98628906/Trippy+33%2527+x+20.5%2522+Geometric+Wallpaper.jpg) ;
+	background-image: url(https://i.imgur.com/3uMBlTk.jpg) ;
 	height: 100vh;
 	width: 60vh;
 }
 
 .input-label{
-	color: whitesmoke;
+	color: hsla(27, 80%, 36%, 1);
 	font-family: 'Righteous', cursive;
 	font-size: 20pt;
-	-webkit-text-stroke: 1px grey;
+	-webkit-text-stroke: 1px white;
 }
 
-.radio-label{
+/* .radio-label{
 	color: whitesmoke;
 	font-family: 'Righteous', cursive;
 	font-size: 15pt;
 	-webkit-text-stroke: 1px grey;
-}
+} */
 
 form{
 	display: flex;

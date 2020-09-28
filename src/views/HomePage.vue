@@ -12,7 +12,7 @@
       <div class='title-container'>
         <img class='logo' src='https://i.imgur.com/3y0HFCx.png'/>
       </div>
-      <img class='background' src='https://i.imgur.com/SSdyCwK.jpg'/>
+      <img class='background' src='https://i.imgur.com/qQ3MjW5.jpg'/>
     </header>
 		<div class="menu">
 			<NewFlightForm @submit="seeOptions" />
@@ -85,6 +85,9 @@ table {
 
 /* end meyers */
 
+html{
+	margin:0;
+}
 
 body{
   margin:0;
