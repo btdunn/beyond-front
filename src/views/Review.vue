@@ -1,9 +1,11 @@
 <template>
   <div>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <body>
       <header>
         <div class="review-container">
           <div class="review">
+            <h1>Your Flight</h1>
             <ReviewFlight />
           </div>
         </div>
@@ -24,7 +26,7 @@ import ReviewFlight from '@/components/ReviewFlight'
 export default {
   components: {
     ReviewFlight,
-  }
+  },
 }
 </script>
 
@@ -36,6 +38,13 @@ body{
 
 header{
   display: flex;
+}
+
+h1{
+  font-family: 'Righteous', cursive;
+  color: whitesmoke;
+  opacity: 50%;
+  margin-left: 50px;
 }
 
 .review-container{
@@ -55,10 +64,10 @@ header{
 }
 
 .review{
-  width: 50%;
+  width: 70%;
   background-color: teal;
-  height: 10vh;
-  margin-top: 150px;
+  height: 50vh;
+  margin-top: 100px;
 }
 
 nav{

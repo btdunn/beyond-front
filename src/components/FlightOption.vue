@@ -3,23 +3,23 @@
     <ul>
       <li v-for="flight in myFlight" :key="flight.flightNumber">
         {{flight.departureTime }} -- {{flight.departureIata}} -- {{flight.arrivalTime}} -- {{flight.arrivalIata}} -- nonstop -- {{flight.flightNumber}}
-        <button class="select">$65</button>
+        <button @click="seeMyFlight" class="select">$65</button>
       </li>
       <li v-for="flight in myFlight" :key="flight.flightNumber">
         {{flight.departureTime}} -- {{flight.departureIata}} -- {{flight.arrivalTime}} -- {{flight.arrivalIata}} -- nonstop -- {{flight.flightNumber}}
-        <button class="select">$72</button>
+        <button @click="seeMyFlight" class="select">$72</button>
       </li>
       <li v-for="flight in myFlight" :key="flight.flightNumber">
         12:15:00 -- {{flight.departureIata}} -- 15:25:00 -- {{flight.arrivalIata}} -- nonstop -- {{+flight.flightNumber +5}}
-        <button class="select">$110</button>
+        <button @click="seeMyFlight" class="select">$110</button>
       </li>
       <li v-for="flight in myFlight" :key="flight.flightNumber">
         13:25:00 -- {{flight.departureIata}} -- 16:35:00 -- {{flight.arrivalIata}} -- nonstop -- {{+flight.flightNumber +8}}
-        <button class="select">$124</button>
+        <button @click="seeMyFlight" class="select">$124</button>
       </li>
       <li v-for="flight in myFlight" :key="flight.flightNumber">
         14:25:00 -- {{flight.departureIata}} -- 17:34:00 -- {{flight.arrivalIata}} -- nonstop -- {{+flight.flightNumber +8}}
-        <button class="select">$177</button>
+        <button @click="seeMyFlight" class="select">$177</button>
       </li>
     </ul>
   </div>
@@ -30,6 +30,13 @@ export default {
   computed: {
     myFlight(){
       return this.$store.state.myFlight
+    }
+  },
+  methods: {
+    seeMyFlight(event){
+      this.$router.push({name: 'Review'})
+      const flight = event.path[1].innerText
+      this.$store.dispatch('getFlightChoice', flight)
     }
   }
 }
