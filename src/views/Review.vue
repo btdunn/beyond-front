@@ -14,10 +14,10 @@
 
       </header>
       <nav>
-        <div class="menu">
+        <div @click="goToMenu" class="menu">
           <h2>In-Flight Menu</h2>
         </div>
-        <div class="about">
+        <div @click="goToAbout" class="about">
           <h2>About Us</h2>
         </div>
       </nav>
@@ -32,6 +32,14 @@ export default {
   components: {
     ReviewFlight,
   },
+  methods: {
+    goToMenu(){
+      this.$router.push({name: 'Menu'})
+    },
+    goToAbout(){
+      this.$router.push({name: 'About'})
+    }
+  }
 }
 </script>
 
@@ -49,7 +57,7 @@ h1{
   font-family: 'Righteous', cursive;
   color: whitesmoke;
   opacity: 60%;
-  margin-left: 80px;
+  margin-left: 40px;
 }
 
 h2{
@@ -76,13 +84,13 @@ h2{
 
 .review{
   width: 70%;
-  background-color: teal;
+  background-color: hsl(174, 34%, 33%);
   height: 50vh;
   margin-top: 100px;
 }
 
 nav{
-  background-color: hsla(5, 79%, 53%, 1);
+  background-color: hsl(14, 71%, 48%);
   width: 100%;
   height: 60vh;
   position: absolute;
@@ -98,6 +106,7 @@ nav{
   background-image: url(https://i.imgur.com/HQHRTBv.png);
   background-size: cover;
   height: 40vh;
+  cursor: pointer;
 }
 
 .about{
@@ -107,5 +116,6 @@ nav{
   background-image: url(https://i.imgur.com/pljadCU.jpg);
   background-size: cover;
   height: 40vh;
+  cursor: pointer;
 }
 </style>

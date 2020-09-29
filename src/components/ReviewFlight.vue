@@ -25,11 +25,10 @@ export default {
 
 <style scoped>
 
-  p{
+  li{
     font-family: 'Source Code Pro', monospace;  
     font-size: 18pt;
     color: wheat;
-    text-align: right;
     align-self: flex-end;
   }
 
@@ -43,7 +42,7 @@ export default {
 
   .ticket{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-content: space-between;
     width: 100%;
   }

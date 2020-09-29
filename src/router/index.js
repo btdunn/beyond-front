@@ -4,6 +4,7 @@ import HomePage from '../views/HomePage.vue'
 import Departures from '../views/Departures.vue'
 import Review from '../views/Review.vue'
 import Menu from '../views/Menu.vue'
+import About from '../views/About.vue'
 
 Vue.use(VueRouter)
 
@@ -24,6 +25,10 @@ const routes = [
     path: '/menu',
     name: 'Menu',
     component: Menu
+  }, {
+    path: '/about',
+    name: 'About',
+    component: About
   }
 ]
 
