@@ -43,8 +43,8 @@ header{
 h1{
   font-family: 'Righteous', cursive;
   color: whitesmoke;
-  opacity: 50%;
-  margin-left: 50px;
+  opacity: 60%;
+  margin-left: 80px;
 }
 
 .review-container{

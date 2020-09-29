@@ -2,17 +2,14 @@
   <div class="ticket">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
     <ul class="labels">
-      <li>Departure:</li>
-      <li>From:</li>
-      <li>Arrival:</li>
-      <li>To:</li>
-      <li>Type:</li>
-      <li>Flight #:</li>
-      <li>Cost:</li>
+      <li>Departure: {{flightChoice.departure}}</li>
+      <li>From: {{flightChoice.from}}</li>
+      <li>Arrival: {{flightChoice.arrival}}</li>
+      <li>To: {{flightChoice.to}}</li>
+      <li>Type: {{flightChoice.type}}</li>
+      <li>Flight #: {{flightChoice.flight}}</li>
+      <li>Cost: {{flightChoice.cost}}</li>
     </ul>
-    <p>
-    {{flightChoice}}
-    </p>
   </div>
 </template>
 
