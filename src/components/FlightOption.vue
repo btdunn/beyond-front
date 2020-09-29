@@ -35,7 +35,6 @@ export default {
   methods: {
     seeMyFlight(event){
       this.$router.push({name: 'Review'})
-      // const flight = event.path[1].innerText
       const flight = {
         departure: event.path[1].childNodes[0].innerText,
         from: event.path[1].childNodes[2].innerText,
@@ -45,7 +44,6 @@ export default {
         flight: event.path[1].childNodes[10].innerText,
         cost: event.path[1].childNodes[11].innerText
       }
-      // console.log(event.path[1].childNodes[0].innerText)
       this.$store.dispatch('getFlightChoice', flight)
     }
   }

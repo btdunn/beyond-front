@@ -14,7 +14,12 @@
 
       </header>
       <nav>
-
+        <div class="menu">
+          <h2>In-Flight Menu</h2>
+        </div>
+        <div class="about">
+          <h2>About Us</h2>
+        </div>
       </nav>
     </body>
   </div>
@@ -47,6 +52,12 @@ h1{
   margin-left: 80px;
 }
 
+h2{
+  font-family: 'Righteous', cursive;
+  color: whitesmoke;
+  opacity: 80%;
+}
+
 .review-container{
   width: 50%;
   background-image: url(https://i.imgur.com/YbnZC4W.png);
@@ -73,9 +84,28 @@ h1{
 nav{
   background-color: hsla(5, 79%, 53%, 1);
   width: 100%;
-  height: 40vh;
+  height: 60vh;
   position: absolute;
   display: flex;
-  justify-content: flex-end;
+  flex-flow: row;
+  justify-content: space-around;
+}
+
+.menu{
+  margin-top: 20px;
+  margin-left: 40px;
+  width: 30%;
+  background-image: url(https://i.imgur.com/HQHRTBv.png);
+  background-size: cover;
+  height: 40vh;
+}
+
+.about{
+  margin-top: 20px;
+  margin-left: 40px;
+  width: 30%;
+  background-image: url(https://i.imgur.com/pljadCU.jpg);
+  background-size: cover;
+  height: 40vh;
 }
 </style>
