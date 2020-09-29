@@ -104,6 +104,7 @@ p{
 .banner{
   background-image: url(https://i.imgur.com/1reX7Qi.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
   width: 50%;
   height: 50vh;
   float: right;

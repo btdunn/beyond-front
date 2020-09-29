@@ -1,9 +1,17 @@
 <template>
   <div>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
     <body>
       <div class="about">
-        <h1>About Beyond Air Travel</h1>
+        <section>
+          <h1>About Beyond Air Travel</h1>
+          <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</li>
+          </ul>
+        </section>
         <img src="https://i.imgur.com/WYY9rvZ.jpg" class="aboutbg"/>
       </div>
       <div @click="goToMenu" class="triangle-left">
@@ -31,6 +39,15 @@ export default {
 
 <style scoped>
 
+section{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  margin-left: 85px;
+  margin-right: 185px;
+}
+
 p{
   font-family: 'Righteous', cursive;
   color: whitesmoke;
@@ -39,8 +56,16 @@ p{
 h1{
   font-family: 'Righteous', cursive;
   color: whitesmoke;
-  margin-left: 85px;
-  position: absolute;
+}
+
+ul{
+  list-style: none;
+  width: 50%;
+}
+
+li{
+  font-family: 'Source Code Pro', monospace;  
+  color: whitesmoke;
 }
 
 .about{
