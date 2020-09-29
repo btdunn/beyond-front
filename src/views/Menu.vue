@@ -120,7 +120,7 @@ p{
 }
 
 img{
-  width: 38%;
+  width: 35%;
 }
 
 .adbg{
