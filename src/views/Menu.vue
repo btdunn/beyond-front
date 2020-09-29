@@ -23,7 +23,7 @@
           </li>
         </ul>
       </div>
-      <div class="triangle-right">
+      <div @click="goToAbout" class="triangle-right">
         <p class="trinav">to About</p>
       </div>
       <div class="banner">
@@ -36,6 +36,16 @@
     </body>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    goToAbout(){
+      this.$router.push({name: "About"})
+    }
+  }
+}
+</script>
 
 <style scoped>
 
@@ -101,7 +111,6 @@ p{
 
 .ad{
   background-color: hsl(174, 34%, 33%);
-  /* background-image: url(https://i.imgur.com/Lk3DmDJ.jpg); */
   background-size: cover;
   width: 50%;
   height: 50vh;
@@ -143,6 +152,7 @@ img{
   margin-right: 25px;
   position: absolute;
   z-index: 2;
+  cursor: pointer;
 }
 
 </style>
