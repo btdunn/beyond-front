@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
     <title>Beyond Air Travel</title>
   </head>
   <body>
@@ -11,7 +12,7 @@
       <div class='title-container'>
         <img class='logo' src='https://i.imgur.com/3y0HFCx.png'/>
       </div>
-      <img class='background' src='https://i.imgur.com/SSdyCwK.jpg'/>
+      <img class='background' src='https://i.imgur.com/qQ3MjW5.jpg'/>
     </header>
 		<div class="menu">
 			<NewFlightForm @submit="seeOptions" />
@@ -31,6 +32,7 @@ export default {
 		seeOptions(selections){
 			this.$router.push({name: 'Departures'})
 			this.$store.dispatch('getFlightSearch', selections)
+			this.$store.dispatch('showFlights')
 		}
 	}
 }
@@ -83,6 +85,9 @@ table {
 
 /* end meyers */
 
+html{
+	margin:0;
+}
 
 body{
   margin:0;

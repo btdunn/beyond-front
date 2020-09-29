@@ -7,6 +7,8 @@ export default new Vuex.Store({
   state: {
     flights: [],
     searchedFlight: [],
+    myFlight: [],
+    flightChoice: [],
   },
   mutations: {
     setFlights(state, data){
@@ -15,6 +17,20 @@ export default new Vuex.Store({
     },
     setSearchedFlight(state, selections){
       state.searchedFlight = selections
+      return state
+    },
+    setShowFlight(state){
+      let foundFlights = state.flights.filter((flight) => {
+        return (
+          flight.departureIata == state.searchedFlight.departure &&
+          flight.arrivalIata == state.searchedFlight.arrival
+        )
+      })
+      state.myFlight = foundFlights
+      return state
+    },
+    setFlightChoice(state, flight){
+      state.flightChoice = flight
       return state
     }
   },
@@ -29,6 +45,12 @@ export default new Vuex.Store({
     },
     getFlightSearch({ commit }, selections){
       commit("setSearchedFlight", selections)
+    },
+    showFlights({ commit }){
+      commit("setShowFlight")
+    },
+    getFlightChoice({ commit }, flight){
+      commit("setFlightChoice", flight)
     }
   },
   modules: {
