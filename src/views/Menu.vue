@@ -1,8 +1,10 @@
 <template>
   <div>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap" rel="stylesheet">
     <body>
       <div class="menu">
+        <h1>In Flight Drink Options</h1>
         <ul>
           <li>
             <img src='https://i.imgur.com/tUJBvmI.png'/>
@@ -21,11 +23,15 @@
           </li>
         </ul>
       </div>
+      <div class="triangle-right">
+        <p class="trinav">to About</p>
+      </div>
       <div class="banner">
-
       </div>
       <div class="ad">
-
+        <h2>You can Vape on the Plane Now!</h2>
+        <img class="vape" src="https://i.imgur.com/1EhV39t.png"/>
+        <img class="adbg" src='https://i.imgur.com/Lk3DmDJ.jpg'/>
       </div>
     </body>
   </div>
@@ -48,6 +54,21 @@ li{
   align-items: center;
 }
 
+h2{
+  font-family: 'Sonsie One', cursive;  
+  color: whitesmoke;
+  position: absolute;
+  margin-top: 25px;
+  margin-left: 50px;
+  z-index: 2;
+}
+
+h1{
+  font-family: 'Righteous', cursive;
+  color: whitesmoke;
+  margin-left: 85px;
+}
+
 h3{
   font-family: 'Righteous', cursive;
   color: whitesmoke;
@@ -67,13 +88,12 @@ p{
   float: left;
   display: flex;
   flex-flow: column;
-  /* justify-content: space-evenly; */
+  overflow: hidden;
 }
 
 .banner{
   background-image: url(https://i.imgur.com/1reX7Qi.jpg);
   background-repeat: no-repeat;
-  /* background-color: hsl(); */
   width: 50%;
   height: 50vh;
   float: right;
@@ -81,13 +101,48 @@ p{
 
 .ad{
   background-color: hsl(174, 34%, 33%);
+  /* background-image: url(https://i.imgur.com/Lk3DmDJ.jpg); */
+  background-size: cover;
   width: 50%;
   height: 50vh;
   float: right;
+  overflow: hidden;
 }
 
 img{
   width: 38%;
+}
+
+.adbg{
+  opacity: 30%;
+  width:100%;
+}
+
+.vape{
+  position: absolute;
+  z-index: 1;
+  width: 30%;
+  margin-top: 120px;
+  margin-left: 125px;
+}
+
+.triangle-right {
+  right: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-left: 100px solid hsl(174, 34%, 33%);
+  border-bottom: 50px solid transparent;
+}
+
+.trinav{
+  font-size: 18pt;
+  top: -2.5em;
+  right: 0;
+  margin-right: 25px;
+  position: absolute;
+  z-index: 2;
 }
 
 </style>
