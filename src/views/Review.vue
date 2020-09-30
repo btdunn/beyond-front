@@ -56,7 +56,7 @@ header{
 h1{
   font-family: 'Righteous', cursive;
   color: whitesmoke;
-  opacity: 60%;
+  opacity: 80%;
   margin-left: 40px;
 }
 
@@ -86,13 +86,13 @@ h2{
   width: 70%;
   background-color: hsl(174, 34%, 33%);
   height: 50vh;
-  margin-top: 100px;
+  margin-top: 55px;
 }
 
 nav{
   background-color: hsl(14, 71%, 48%);
   width: 100%;
-  height: 60vh;
+  height:50vh;
   position: absolute;
   display: flex;
   flex-flow: row;

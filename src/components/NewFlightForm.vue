@@ -8,10 +8,6 @@
       <input v-model="ddate" type='date' name='fromDate' alt='Departure Date'>
       <label class='input-label' for='to'>Arriving In...</label>
       <input v-model="arrival" type='text' name='to' alt='Arriving In...'>
-      <!-- <label class='radio-label' for='one-way'>One Way</label>
-      <input v-model="direction" value='one-way' type='radio' class='radio' name='direction' alt='one-way'>
-      <label class='radio-label' for='round-trip'>Round Trip</label>
-      <input v-model="direction" value='round-trip' type='radio' class='radio' name='direction' alt='round-trip'> -->
       
       <input class='submit-button' type='submit' value='Fly'>
     </form>
@@ -27,7 +23,6 @@ export default {
         departure: "",
         ddate: "",
         arrival: "",
-        // direction: "",
     }
   },
   methods: {
@@ -51,18 +46,11 @@ nav{
 }
 
 .input-label{
-	color: hsla(27, 80%, 36%, 1);
+	color: hsl(37, 52%, 22%);
 	font-family: 'Righteous', cursive;
 	font-size: 20pt;
-	-webkit-text-stroke: 1px white;
+	-webkit-text-stroke: 1px whitesmoke;
 }
-
-/* .radio-label{
-	color: whitesmoke;
-	font-family: 'Righteous', cursive;
-	font-size: 15pt;
-	-webkit-text-stroke: 1px grey;
-} */
 
 form{
 	display: flex;
@@ -72,9 +60,11 @@ form{
 }
 
 input{
-	border: 2px solid hsla(19, 80%, 36%, 1);
+	border: 2px solid hsl(14, 71%, 48%);
+  border-radius: 25px;
 	padding: 10px;
   margin-bottom: 16px;
+  color: hsl(37, 52%, 22%);
 }
 
 .radio{
@@ -84,9 +74,11 @@ input{
 }
 
 .submit-button{
-	background: hsla(19, 66%, 47%, 1);
+	background: hsl(14, 71%, 48%);
 	opacity: 90%;
 	font-family: 'Righteous', cursive;
+  color: whitesmoke;
+  font-size: 18pt;
 }
 
 </style>

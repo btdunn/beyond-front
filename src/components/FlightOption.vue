@@ -3,11 +3,11 @@
     <ul>
       <ul v-for="flight in myFlight" :key="flight.flightNumber">
         <li>{{flight.departureTime }}</li> <li>{{flight.departureIata}}</li> <li>{{flight.arrivalTime}}</li> <li>{{flight.arrivalIata}}</li> <li>nonstop</li> <li>{{flight.flightNumber}}</li>
-        <button @click="seeMyFlight" class="select">$65</button>
+        <button @click="seeMyFlight" class="selectf">$65</button>
       </ul>
       <ul v-for="flight in myFlight" :key="flight.flightNumber">
         <li>{{flight.departureTime }}</li> <li>{{flight.departureIata}}</li> <li>{{flight.arrivalTime}}</li> <li>{{flight.arrivalIata}}</li> <li>nonstop</li> <li>{{flight.flightNumber}}</li>
-        <button @click="seeMyFlight" class="select">$72</button>
+        <button @click="seeMyFlight" class="selectf">$72</button>
       </ul>
       <ul v-for="flight in myFlight" :key="flight.flightNumber">
         <li>12:15:00</li> <li>{{flight.departureIata}}</li> <li>15.25.00</li> <li>{{flight.arrivalIata}}</li> <li>nonstop</li> <li>{{+flight.flightNumber+5}}</li>
@@ -59,24 +59,31 @@ li{
   justify-content: space-between;
   font-family: 'Source Code Pro', monospace;  
   font-size: 18pt;
-  color: goldenrod;
+  color: hsl(57, 91%, 65%);
   border: 1px white;
   padding: 20px;
-  background-color: hsla(59, 58%, 12%, 1);
+  background-color: hsla(37, 52%, 22%);
   display: inline-block;
   /* background-color:rgb(170, 118, 22) */
 }
 
 .select{
   font-family: 'Source Code Pro', monospace;  
-  background: wheat;
+  background: hsl(57, 91%, 65%);
   padding: 10px;
-  color: hsla(59, 58%, 12%, 1);
+  color: hsla(37, 52%, 22%);
   opacity: 90%;
   border-radius: 50%;
+  display: inline;
 }
 
-.select{
+.selectf{
+  font-family: 'Source Code Pro', monospace;  
+  background: hsl(57, 91%, 65%);
+  padding: 14px;
+  color: hsla(37, 52%, 22%);
+  opacity: 90%;
+  border-radius: 50%;
   display: inline;
 }
 
