@@ -2,6 +2,7 @@
   <div>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
     <body>
       <div class="menu">
         <h1>In Flight Drink Options</h1>
@@ -22,6 +23,9 @@
             <p>aged and overproof jamaican rum, lime, grapefruit, falernum, cinnamon</p>
           </li>
         </ul>
+        <div @click="gotToRev" class="circle">
+          <p class="cirnav">to Review</p>
+        </div>
       </div>
       <div @click="goToAbout" class="triangle-right">
         <p class="trinav">to About</p>
@@ -42,6 +46,9 @@ export default {
   methods: {
     goToAbout(){
       this.$router.push({name: "About"})
+    },
+    gotToRev(){
+      this.$router.push({name: "Review"})
     }
   }
 }
@@ -86,9 +93,9 @@ h3{
 
 p{
   margin-left: 45px;
-  font-family: 'Righteous', cursive;
+  font-family: 'Source Code Pro', monospace;  
   color: whitesmoke;
-  font-size: 10pt;
+  font-size: 9pt;
 }
 
 .menu{
@@ -131,7 +138,7 @@ img{
 .vape{
   position: absolute;
   z-index: 1;
-  width: 30%;
+  width: 28%;
   margin-top: 120px;
   margin-left: 125px;
 }
@@ -147,10 +154,32 @@ img{
 }
 
 .trinav{
+  font-family: 'Righteous', cursive;
   font-size: 18pt;
   top: -2.5em;
   right: 0;
   margin-right: 25px;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+
+
+.circle {
+  width: 80px;
+  height: 80px;
+  background: hsl(174, 34%, 33%);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+}
+
+.cirnav{
+  font-family: 'Righteous', cursive;
+  font-size: 18pt;
+  bottom: -0.6em;
+  right: 0;
+  margin-left: 25px;
   position: absolute;
   z-index: 2;
   cursor: pointer;

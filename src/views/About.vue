@@ -7,10 +7,11 @@
         <section>
           <h1>About Beyond Air Travel</h1>
           <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</li>
+            <li>Beyond Air Travel started with a dream... a dream about making air travel sexy again. What happened to make us so bored with flying through the sky in a marvel of science? When did booking a flight start looking so much like booking a greyhound bus?</li>
+            <li>Here at Beyond we seek to renew the excitement and luxury of air travel. By evoking the imagery and oppulence of Jet Age airlines, Beyond Air Travel invites you to get excited about flying again. </li>
+            <li>Get your ticket, grab a cocktail and feel free to move about the cabin...because this is not air travel...this is Beyond Air Travel!</li>
           </ul>
+          <img src="https://i.imgur.com/1XB8QDz.jpg" class="aboutPic">
         </section>
         <img src="https://i.imgur.com/WYY9rvZ.jpg" class="aboutbg"/>
       </div>
@@ -18,6 +19,9 @@
         <p class="trinav">to Menu</p>
       </div>
       <div class="banner">
+        <div @click="gotToRev" class="circle">
+          <p class="cirnav">to Review</p>
+        </div>
       </div>
       <div class="schematic">
         <img class="plane" src='https://i.imgur.com/7iFr7NY.png'/>
@@ -32,6 +36,9 @@ export default {
   methods: {
     goToMenu(){
       this.$router.push({name: "Menu"})
+    },
+    gotToRev(){
+      this.$router.push({name: "Review"})
     }
   }
 }
@@ -66,6 +73,7 @@ ul{
 li{
   font-family: 'Source Code Pro', monospace;  
   color: whitesmoke;
+  margin-top: 12px;
 }
 
 .about{
@@ -135,4 +143,32 @@ li{
   opacity: 15%;
 }
 
+
+.circle {
+  width: 80px;
+  height: 80px;
+  background: hsl(14, 71%, 48%);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.cirnav{
+  font-family: 'Righteous', cursive;
+  font-size: 18pt;
+  bottom: -0.6em;
+  left: 0;
+  margin-right: 25px;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.aboutPic{
+  width: 40%;
+  position: absolute;
+  margin-top: 650px;
+  margin-left: 40px;
+}
 </style>
