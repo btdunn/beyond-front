@@ -14,7 +14,12 @@
 
       </header>
       <nav>
-
+        <div @click="goToMenu" class="menu">
+          <h2>In-Flight Menu</h2>
+        </div>
+        <div @click="goToAbout" class="about">
+          <h2>About Us</h2>
+        </div>
       </nav>
     </body>
   </div>
@@ -27,6 +32,14 @@ export default {
   components: {
     ReviewFlight,
   },
+  methods: {
+    goToMenu(){
+      this.$router.push({name: 'Menu'})
+    },
+    goToAbout(){
+      this.$router.push({name: 'About'})
+    }
+  }
 }
 </script>
 
@@ -43,8 +56,14 @@ header{
 h1{
   font-family: 'Righteous', cursive;
   color: whitesmoke;
-  opacity: 50%;
-  margin-left: 50px;
+  opacity: 60%;
+  margin-left: 40px;
+}
+
+h2{
+  font-family: 'Righteous', cursive;
+  color: whitesmoke;
+  opacity: 80%;
 }
 
 .review-container{
@@ -65,17 +84,38 @@ h1{
 
 .review{
   width: 70%;
-  background-color: teal;
+  background-color: hsl(174, 34%, 33%);
   height: 50vh;
   margin-top: 100px;
 }
 
 nav{
-  background-color: hsla(5, 79%, 53%, 1);
+  background-color: hsl(14, 71%, 48%);
   width: 100%;
-  height: 40vh;
+  height: 60vh;
   position: absolute;
   display: flex;
-  justify-content: flex-end;
+  flex-flow: row;
+  justify-content: space-around;
+}
+
+.menu{
+  margin-top: 20px;
+  margin-left: 40px;
+  width: 30%;
+  background-image: url(https://i.imgur.com/HQHRTBv.png);
+  background-size: cover;
+  height: 40vh;
+  cursor: pointer;
+}
+
+.about{
+  margin-top: 20px;
+  margin-left: 40px;
+  width: 30%;
+  background-image: url(https://i.imgur.com/pljadCU.jpg);
+  background-size: cover;
+  height: 40vh;
+  cursor: pointer;
 }
 </style>
