@@ -81,7 +81,6 @@ li{
   width: 50%;
   height: 100vh;
   float: left;
-  /* display: block; */
   overflow: hidden;
 }
 

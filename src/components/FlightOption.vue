@@ -64,7 +64,6 @@ li{
   padding: 20px;
   background-color: hsla(37, 52%, 22%);
   display: inline-block;
-  /* background-color:rgb(170, 118, 22) */
 }
 
 .select{
