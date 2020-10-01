@@ -87,6 +87,7 @@ h2{
   background-color: hsl(174, 34%, 33%);
   height: 50vh;
   margin-top: 55px;
+  border-radius: 15px;
 }
 
 nav{

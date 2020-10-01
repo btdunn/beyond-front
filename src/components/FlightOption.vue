@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul>
+    <ul class="outerUl">
       <ul v-for="flight in myFlight" :key="flight.flightNumber">
         <li>{{flight.departureTime }}</li> <li>{{flight.departureIata}}</li> <li>{{flight.arrivalTime}}</li> <li>{{flight.arrivalIata}}</li> <li>nonstop</li> <li>{{flight.flightNumber}}</li>
         <button @click="seeMyFlight" class="selectf">$65</button>
@@ -51,8 +51,16 @@ export default {
 </script>
 
 <style scoped>
+
+.outerUl{
+  list-style: none;
+  padding: 0px;
+}
+
 ul{
   list-style: none;
+  background-color: hsla(37, 52%, 22%);
+  border-radius: 10px;
 }
 
 li{
@@ -60,9 +68,7 @@ li{
   font-family: 'Source Code Pro', monospace;  
   font-size: 18pt;
   color: hsl(57, 91%, 65%);
-  border: 1px white;
-  padding: 20px;
-  background-color: hsla(37, 52%, 22%);
+  padding: 10px;
   display: inline-block;
 }
 
@@ -74,6 +80,7 @@ li{
   opacity: 90%;
   border-radius: 50%;
   display: inline;
+  margin-left: 8px;
 }
 
 .selectf{
@@ -84,6 +91,8 @@ li{
   opacity: 90%;
   border-radius: 50%;
   display: inline;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 </style>
