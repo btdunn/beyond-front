@@ -70,6 +70,7 @@ li{
   color: hsl(57, 91%, 65%);
   padding: 10px;
   display: inline-block;
+  padding: 20px;
 }
 
 .select{
@@ -81,6 +82,7 @@ li{
   border-radius: 50%;
   display: inline;
   margin-left: 8px;
+  margin-right: 8px;
 }
 
 .selectf{
@@ -92,7 +94,7 @@ li{
   border-radius: 50%;
   display: inline;
   margin-left: 8px;
-  margin-right: 8px;
+  margin-right: 10px;
 }
 
 </style>
